@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bloodbank</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <!-- material lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="../lib/material.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- material lite -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAtwO1r6tXSBVLwBMwnat8Iffy7vapuFkI",
+            authDomain: "colgame-43259.firebaseapp.com",
+            databaseURL: "https://colgame-43259.firebaseio.com",
+            projectId: "colgame-43259",
+            storageBucket: "colgame-43259.appspot.com",
+            messagingSenderId: "750834468777"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+</head>
+
+<body>
+    <!-- nav start -->
+    <!-- <nav class="navbar navbar-expand-lg  navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav> -->
+    <!-- nav end -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top"style="height:10vh">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="font-size:30px" >BLOOD APP</a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="container">
+            <!--main-->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="sample3">
+                                <label class="mdl-textfield__label" for="sample3">FullName...</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <input class="mdl-textfield__input " type="text" id="fullname">
+                                <label class="mdl-textfield__label" for="sample3">Full Name...</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <input class="mdl-textfield__input " type="text" id="email">
+                                <label class="mdl-textfield__label" for="sample3">Email...</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <input class="mdl-textfield__input " type="password" id="password">
+                                <label class="mdl-textfield__label" for="sample3">Password...</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <input class="mdl-textfield__input " type="text" id="city">
+                                <label class="mdl-textfield__label" for="sample3">City...</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <input class="mdl-textfield__input " type="text" id="bloodgroup">
+                                <label class="mdl-textfield__label" for="sample3">Blood Group...</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <input class="mdl-textfield__input " type="text" id="phonenumber">
+                                <label class="mdl-textfield__label" for="sample3">Phone Number</label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <legend class="col-form-legend col-sm-2" style="font-size :20px">Gender</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check" style="margin-top:1%;">
+                                <label class="form-check-label" style="margin-right:2%">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked> male
+                                </label>
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female"> female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button class="btn btn-success" style="height:70%;line-height:30px;margin-top:3%;font-size:30px;text-align:center" id="getstarted">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="display:flex;align-items:center;justify-content:center" >
+                    <div style="display:flex;background:url('../images/blood4.jpg');background-size: 100% 100%, cover  !important;width:100vw;height:60vh">
+
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- main end -->
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="../lib/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="../lib/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Signin </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="login.css" rel="stylesheet">
+    <link href="../lib/bootstrap.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAtwO1r6tXSBVLwBMwnat8Iffy7vapuFkI",
+            authDomain: "colgame-43259.firebaseapp.com",
+            databaseURL: "https://colgame-43259.firebaseio.com",
+            projectId: "colgame-43259",
+            storageBucket: "colgame-43259.appspot.com",
+            messagingSenderId: "750834468777"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+
+    <!-- Custom styles for this template -->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="loginEmail" id="loginEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="loginPass" class="form-control" placeholder="Password" required>
+       
+        <button class="btn btn-lg btn-success btn-block" type="submit" id="loginBtn" >Sign in</button>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+  </body>
+</html>

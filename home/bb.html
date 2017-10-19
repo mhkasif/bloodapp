@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>bloodbank</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+  crossorigin="anonymous">
+  <!-- material lite -->
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../lib/material.css">
+  <!-- material lite -->
+  <link rel="stylesheet" href="bb.css">
+  
+
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAtwO1r6tXSBVLwBMwnat8Iffy7vapuFkI",
+      authDomain: "colgame-43259.firebaseapp.com",
+      databaseURL: "https://colgame-43259.firebaseio.com",
+      projectId: "colgame-43259",
+      storageBucket: "colgame-43259.appspot.com",
+      messagingSenderId: "750834468777"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div class="row">
+  <div class="col-lg-12" style="height:7vh" style="position:relative">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="font-size:25px;">BLOOD APP</a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </nav>
+
+  </div>
+  </div>
+  <!--main-->
+
+  <!-- 
+    <span>Blood Group</span>   
+    <select id="bg">
+      <option value disabled selected>bloodGroup</option>
+      <option value="A+">A+</option>
+      <option value="B+">B+</option>
+      <option value="O-">O-</option>
+      
+    </select><br>
+    
+    
+    <input type="text" id="city" placeholder="city"><br>
+    <input type="text" id="hospital" placeholder="hospital"><br>
+    <span > DOB</span>  <input type="date" id="date" placeholder="date"><br>
+    <input type="text" id="relation" placeholder="your relation with patient"><br>
+    <input type="text" id="contact" placeholder="contact number"><br>
+    <input type="text" id="instruction" placeholder="additional instruction"><br>
+    <button onclick="submit()"> submit</button> -->
+  <div class="container" style="display:flex;align-items:center;justify-content:center;width:100vw;height:95vh">
+
+      <div class="row">
+        <div class="col-lg-12" style="">
+          <!-- <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Blood Group...</label>
+              </div>
+            </div>
+
+          </div> -->
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="bloodgroup">
+                <label class="mdl-textfield__label" for="sample3">Blood Group...</label>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="unit">
+                <label class="mdl-textfield__label" for="sample3">No.Of Unit Required...</label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                <input class="mdl-textfield__input " type="text" id="urgency">
+                <label class="mdl-textfield__label" for="sample3">Urgency...</label>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                <input class="mdl-textfield__input " type="text" id="city">
+                <label class="mdl-textfield__label" for="sample3">City...</label>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                <input class="mdl-textfield__input " type="text" id="hospital">
+                <label class="mdl-textfield__label" for="sample3">Hospital...</label>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                <input class="mdl-textfield__input " type="text" id="relation">
+                <label class="mdl-textfield__label" for="sample3">Your Relation With Patient"...</label>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                <input class="mdl-textfield__input " type="text" id="instruction">
+                <label class="mdl-textfield__label" for="sample3">Additional Instruction...</label>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                <input class="mdl-textfield__input " type="text" id="contact">
+                <label class="mdl-textfield__label" for="sample3">Contact Number</label>
+              </div>
+            </div>
+
+
+          </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div style="display:flex;justify-content:center;align-items:center">
+
+              <button class="btn btn-success" id="post" style=" width:100%;font-size:25px;;">POST</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+  <script src="bb.js"></script>
+  <script src="../lib/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="../lib/bootstrap.js"></script>
+
+</body>
+
+</html>
